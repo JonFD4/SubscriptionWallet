@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+
 import dj_database_url
 if os.path.exists('env.py'):
     import env
@@ -65,7 +66,7 @@ ROOT_URLCONF = 'subscriptionwallet.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': ['TEMPLATES_DIR'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
