@@ -31,8 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'subscriptionwallet.herokuapp.com',
-    'localhost'
-    '8000-jonfd4-subscriptionwall-39dugkqv08z.ws-eu110.gitpod.io',
+    'localhost',
+    '8000-jonfd4-subscriptionwall-39dugkqv08z.ws-eu110.gitpod.io'
 
 ]
 
@@ -45,9 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary_storage'
+    'cloudinary_storage',
     'django.contrib.staticfiles',
-    'cloudinary'
+    'cloudinary',
     'users',
 ]
 
