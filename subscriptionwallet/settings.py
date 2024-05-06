@@ -30,9 +30,9 @@ SECRET_KEY =  os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'subscriptionwallet.herokuapp.com',
+    'subscriptionwallet-f9c06378184d.herokuapp.com',
     'localhost',
-    '8000-jonfd4-subscriptionwall-39dugkqv08z.ws-eu110.gitpod.io'
+    '8000-jonfd4-subscriptionwall-39dugkqv08z.ws-eu111.gitpod.io'
 
 ]
 
@@ -91,9 +91,9 @@ WSGI_APPLICATION = 'subscriptionwallet.wsgi.application'
  #       'NAME': BASE_DIR / 'db.sqlite3',
   #  }
 #}
-
+db_url = os.environ.get('DATABASE_URL')
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    'default': dj_database_url.parse(db_url)
 }
 
 
