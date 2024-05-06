@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'subscription_wallet_app'
 ]
 
 MIDDLEWARE = [
