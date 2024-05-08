@@ -1,0 +1,55 @@
+:root {
+    --primary-color: #FECD45; /* Bright yellow */
+    --secondary-color: #005580; /* Darker Blue */
+    --text-color: #333333; /* Neutral Gray */
+    --hover-color: hsl(210, 100%, 50%); /* Saturated Blue */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/* Customize the navbar colors */
+.navbar-custom {
+    background-color: var(--primary-color);
+}
+
+.navbar-custom .navbar-brand svg rect {
+    fill: var(--secondary-color);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: var(--text-color);
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--text-color);
+    font-size: 18px; 
+    display: block; 
+    padding: 10px 20px; 
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    background-color: var(--secondary-color); 
+    color: #FFF; 
+}
+
+/* Center the navbar menu in the dropdown */
+.navbar-custom .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-custom .navbar-nav {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.navbar-custom .navbar-nav .nav-item {
+    margin: 10px 0;
+}
