@@ -4,14 +4,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
 :root {
-    --primary-color: #FECD45; /* Bright yellow */
-    --secondary-color: #005580; /* Darker Blue */
-    --text-color: #333333; /* Neutral Gray */
-    --hover-color: hsl(210, 100%, 50%); /* Saturated Blue */
+    --primary-color: #ffffff;  /*white*/
+    --secondary-color: #2a2b2e; /* Dark Gray */
+    --text-color: #2a2b2e; /* Dark Gray */
+    --hover-color: #ff9d4d; /* Lighter Coral Pink */
     --header-font: 'Quicksand', sans-serif;
     --normal-font: 'Roboto', sans-serif;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +19,13 @@
     overflow-x: hidden;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 /* Customize the navbar colors */
-
 .navbar-custom {
     background-color: var(--primary-color);
 }
@@ -33,21 +36,20 @@
 
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color: var(--text-color);
+    color: var(--secondary-color);
 }
 
 .navbar-custom .navbar-nav .nav-link {
-    color: var(--text-color);
+    color: var(--secondary-color);
     font-size: 18px; 
     display: block; 
     padding: 10px 20px; 
 }
 
 .navbar-custom .navbar-nav .nav-link:hover {
-    background-color: var(--secondary-color); 
-    color: #FFF; 
+    background-color: var(--hover-color); 
+    color: var(--primary-color); 
     border-radius: 10px;
-    width:100vw;
 }
 
 /* Center the navbar menu in the dropdown */
@@ -64,7 +66,76 @@
 .navbar-custom .navbar-nav .nav-item {
     margin: 10px 0;
 }
+
 .nav-link{ 
     font-family: var(--header-font);
     font-size: medium;
 }
+main {
+    flex: 1 0 auto;
+}
+
+/* Customizing footer */
+footer {
+    background-color: var(--secondary-color);
+width: 100%;
+background-color: var(--secondary-color);
+color: var(--primary-color);
+font-family: 'Quicksand', sans-serif;
+font-weight: 400;
+text-align: center;
+}
+footer h5 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--hover-color);
+}
+
+.social-media-icon{
+    font-size: 2rem;
+}
+
+.icon-instagram {
+    background-image: linear-gradient(45deg, #405de6 0%, #5851db 11%, #bc2a8d 22%, #e95950 33%, #fccc63 44%, #fbad50 55%, #ff6600 66%, #ff9933 77%, #ffcc33 88%, #feda75 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+
+
+.icon-messenger {
+    background-image: linear-gradient(45deg, #ffffff 0%, #ffb6c1 25%, #8a2be2 50%, #007fff 75%); /* Gradient resembling Messenger logo */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+
+.icon-twitter {
+    background-image: linear-gradient(45deg, #1DA1F2, #AED9F1); /* Gradient resembling Twitter logo */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
