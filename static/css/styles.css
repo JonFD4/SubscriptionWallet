@@ -7,18 +7,20 @@
     --primary-color: #ffffff;  /*white*/
     --secondary-color: #2a2b2e; /* Dark Gray */
     --text-color: #2a2b2e; /* Dark Gray */
-    --hover-color: #ff9d4d; /* Lighter Coral Pink */
-    --header-font: 'Quicksand', sans-serif;
-    --normal-font: 'Roboto', sans-serif;
+    --hover-color: #005580; /* dark blue*/
+    --header-font: 'Roboto', sans-serif;
+    --normal-font: 'Quicksand', sans-serif;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: var(--normal-font);
     overflow-x: hidden;
 }
-
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--header-font)
+}
 body{
     display: flex;
     flex-direction: column;
@@ -30,7 +32,7 @@ body{
     background-color: var(--primary-color);
 }
 
-.navbar-custom .navbar-brand svg rect {
+.navbar-custom .navbar-brand {
     fill: var(--secondary-color);
 }
 
@@ -139,3 +141,52 @@ footer a:hover {
     font-weight: bold;
 }
 
+
+/*customising signin page*/
+.sign-container {
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.sign-h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+.welcome-back-text{
+    font-size: 1rem;
+    font-weight:bold;
+}
+.center-form-elements > p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.btn-signup {
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-family: var(--normal-font);
+    transition: background-color 0.3s ease;
+}
+
+.btn-signup:hover {
+    background-color: #003c4e;
+    color:white;
+}
+.login {
+    width: 100%;
+    max-width: 400px;
+}
+input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-family: var(--normal-font);
+    }
