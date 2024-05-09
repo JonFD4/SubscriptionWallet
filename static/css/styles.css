@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Import Quicksand */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
 :root {
     --primary-color: #FECD45; /* Bright yellow */
     --secondary-color: #005580; /* Darker Blue */
     --text-color: #333333; /* Neutral Gray */
     --hover-color: hsl(210, 100%, 50%); /* Saturated Blue */
+    --header-font: 'Quicksand', sans-serif;
+    --normal-font: 'Roboto', sans-serif;
 }
 
 * {
@@ -10,10 +17,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 
 /* Customize the navbar colors */
+
 .navbar-custom {
     background-color: var(--primary-color);
 }
@@ -37,6 +46,8 @@
 .navbar-custom .navbar-nav .nav-link:hover {
     background-color: var(--secondary-color); 
     color: #FFF; 
+    border-radius: 10px;
+    width:100vw;
 }
 
 /* Center the navbar menu in the dropdown */
@@ -52,4 +63,8 @@
 
 .navbar-custom .navbar-nav .nav-item {
     margin: 10px 0;
+}
+.nav-link{ 
+    font-family: var(--header-font);
+    font-size: medium;
 }
