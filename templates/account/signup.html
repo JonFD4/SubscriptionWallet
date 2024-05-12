@@ -4,9 +4,10 @@
     {% trans "Signup" %}
 {% endblock head_title %}
 {% block content %}
-    {% element h1 %}
+<div class="signup-form">
+    <h1 class="sign-h1">
         {% trans "Sign Up" %}
-    {% endelement %}
+    </h1>
     {% setvar link %}
         <a href="{{ login_url }}">
         {% endsetvar %}
@@ -15,8 +16,10 @@
     {% endsetvar %}
     <p>{% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}</p>
     {% if not SOCIALACCOUNT_ONLY %}
+    
         {% url 'account_signup' as action_url %}
-        {% element form form=form method="post" action=action_url tags="entrance,signup" %}
+        <div class="form-element">
+            {% element form form=form method="post" action=action_url tags="entrance,signup" %}
             {% slot body %}
                 {% csrf_token %}
                 {% element fields form=form unlabeled=True %}
@@ -24,13 +27,15 @@
                 {{ redirect_field }}
             {% endslot %}
             {% slot actions %}
-                {% element button tags="prominent,signup" type="submit" %}
-                    {% trans "Sign Up" %}
-                {% endelement %}
+            <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %}</button>
+        
             {% endslot %}
         {% endelement %}
+        </div>
+       
     {% endif %}
     {% if SOCIALACCOUNT_ENABLED %}
         {% include "socialaccount/snippets/login.html" with page_layout="entrance" %}
     {% endif %}
+</div>
 {% endblock content %}
