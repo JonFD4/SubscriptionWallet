@@ -19,6 +19,7 @@ from subscription_wallet_app import views  # Import views directly
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('dashboard/', views.dashboard, name='dashboard'),
     path('subscriptions/', views.subscription_list, name='subscription_list'),
     path('', views.index_view.as_view(), name='home'),
     path('accounts/', include('allauth.urls')),
