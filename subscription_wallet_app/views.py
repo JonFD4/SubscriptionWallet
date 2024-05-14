@@ -19,6 +19,8 @@ def signup(request):
         form = YourSignUpForm(request.post)
         if form is_valid():
             username= form.cleaned_data('username')
+            email = form.cleaned_data('email')
+            
 
 
 
