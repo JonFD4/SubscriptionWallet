@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from subscription_wallet_app import views  # Import views directly
+#from subscription_wallet_app import views  # Import views directly
+from django.config import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
